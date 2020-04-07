@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    script(src="../webpack-demo/src/index")
+    script
+      | console.log('layout')
+  body
+    div.header_wrap header
+        ul
+            li
+                a(href='../') index
+            li
+                a(href='../users') users
+    block content
+    block footer
+        div.footer_wrap footer
+
+

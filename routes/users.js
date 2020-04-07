@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-console.log('1')
+console.log('users page');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('users', { title: 'users' });
