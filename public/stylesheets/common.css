@@ -1,56 +1,17 @@
-/*
-Error: File to import not found or unreadable: variable.
-        on line 1 of common.scss
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 1 | @import 'variable';
+ *   |         ^^^^^^^^^^
+ *   '
+ *   common.scss 1:9  root stylesheet */
 
-1: @import 'variable';
-2: @import 'mixin';
-3: 
-4: @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-5: 
-6: html, body { height: 100%; }
-
-Backtrace:
-common.scss:1
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:44:in `import'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/Users/kys_mac/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/sass-3.7.4/bin/scss:13:in `<top (required)>'
-/Users/kys_mac/.rbenv/versions/2.6.3/bin/scss:23:in `load'
-/Users/kys_mac/.rbenv/versions/2.6.3/bin/scss:23:in `<main>'
-*/
-body:before {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
   white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: variable.\A         on line 1 of common.scss\A \A 1: @import 'variable';\A 2: @import 'mixin';\A 3: \A 4: @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);\A 5: \A 6: html, body { height: 100%; }"; }
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @import 'variable';\d\a   \2502          ^^^^^^^^^^\a   \2575 \a   common.scss 1:9  root stylesheet";
+}
