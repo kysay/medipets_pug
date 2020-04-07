@@ -1,0 +1,43 @@
+@import 'variable';
+
+.radius_st { border-radius: 45px !important; }
+
+//버튼 공통 스타일
+.but_style {
+  display: inline-block; height: 30px; line-height: 30px; padding: 0 15px; min-width: 100px; text-align: center; font-size: 12px;
+  @extend .radius_st;
+
+  color: white; border: 1px solid $color_b; background: $color_b;
+}
+.but_style:hover { color: $color_b; border: 1px solid $color_b !important; background: white !important; }
+
+.but_wrap { display: inline-block; width: 100%;
+
+  //공통 버튼스타일
+  a, input[type='submit'], button { @extend .but_style; transition: all 0.2s ease-in; margin-right: 6px; }
+  a:last-of-type { margin-right: 0; }
+  //버튼넓이
+  a.w_100 { width: 100%; }
+
+  //컬러버튼
+  .white_bg { color: $color_b; border: 1px solid $color_b; background: white !important; }
+  //.white_bg:hover { color: white ; border: 1px solid $color_b; background: $color_b !important; }
+
+  > * { line-height: 30px; }
+
+}
+
+.under_line_but { border: 0; width: auto !important; color: #aaa; text-decoration: underline #aaa !important; background: none; text-underline-position: under; float: initial !important; }
+.under_line_but:hover { border: 0 !important; background: none !important; text-decoration: underline $color_b !important; }
+
+
+
+
+.download__select_but_wrap {
+  > * { width: 100px; float: left; display: inline-block; color: $color_b; padding: 0; height: 25px; line-height: 25px; margin-right: 10px; text-align: center; font-size: 10px !important; }
+  > *:last-child { margin-right: 0; }
+  select { border: 1px solid $color_b; color:$color_b !important; line-height: 15px !important; padding: 5px 5px 5px 10px !important;
+    background: url('../../images/icon/select_icon_b.png') no-repeat white calc(100% - 5px) 50%; background-size: 8px; }
+  a { border: 1px solid $color_b; }
+}
+
