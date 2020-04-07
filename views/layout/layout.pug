@@ -6,17 +6,26 @@ html
     link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/common.css')
     link(rel='stylesheet', href='/stylesheets/layout.css')
-    script(src="../webpack-demo/src/index")
+    link(rel='stylesheet', href='/stylesheets/but_reset.css')
+    script(src="/js/img.js")
     script
-      | console.log('layout')
+        | console.log('layout');
+        | console.log(logo);
   body
-    div.header_wrap header
+    div.header_wrap
+        div.logo_wrap
+            //img(src=logo).logo
+            img(src="/img/1.png")
+            script
+                | console.log(logo)
+                | console.log('logo??')
         ul
             li
                 a(href='../') index
             li
                 a(href='../users') users
-    block content
+    div.content_wrap
+        block content
     block footer
         div.footer_wrap footer
 
