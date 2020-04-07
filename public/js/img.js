@@ -1,1 +1,1 @@
-// var logo = "/img/1.png";
+var logo = "/img/logo.png";

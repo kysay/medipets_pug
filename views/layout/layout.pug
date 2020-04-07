@@ -12,21 +12,30 @@ html
         | console.log('layout');
         | console.log(logo);
   body
-    div.header_wrap
-        div.logo_wrap
-            //img(src=logo).logo
-            img(src="/img/1.png")
-            script
-                | console.log(logo)
-                | console.log('logo??')
-        ul
-            li
-                a(href='../') index
-            li
-                a(href='../users') users
-    div.content_wrap
-        block content
-    block footer
-        div.footer_wrap footer
+    div.container
+        div.header_wrap
+            div.logo_wrap
+                img(src=logo).logo
+                img(src="/img/logo.png")
+                script
+                    | console.log(logo)
+                    | console.log('logo??')
+            ul
+                li
+                    a(href='../') MEDPETS
+                li
+                    a(href='../users') PRODUCTS
+                li
+                    a(href='../users') CONTACT US
+    div.container
+        div.content_wrap
+            block content
+    div
+      div.footer_wrap
+        div.container
+            | 강원도 강릉시 송정동 225번지 | 사업자등록번호 : 123-45-67890<br/>
+            | TEL : 010 3343 6352 | FAX : 02 1234 1234 | E-mail : help@medpets.com<br/><br/>
+            | COPYRIGHT©2019 MEDPETS, INC. ALL RIGHTS RESERVED.
+
 
 
