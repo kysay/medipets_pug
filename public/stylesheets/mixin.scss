@@ -1,0 +1,9 @@
+//scss mixin 정의
+@mixin border($px) {
+  //border: $px solid $main_c;
+}
+
+@mixin item_width_height($px: 1px) {
+  width: $px;
+  height: $px;
+}
