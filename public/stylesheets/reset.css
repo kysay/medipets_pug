@@ -1,3 +1,157 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Noto Sans KR','Malgun Gothic','맑은고딕',dotum,'돋움',sans-serif !important;
+  font-size: 12px;
+  overflow-x: hidden; }
 
+html:lang(en) {
+  font-family: 'Noto Sans KR',sans-serif; }
+
+html:lang(ko) {
+  font-family: 'Noto Sans KR','Malgun Gothic','맑은고딕',dotum,'돋움',sans-serif !important; }
+
+body {
+  color: #000; }
+
+html, body {
+  min-width: 320px; }
+
+html::-ms-expand, body::-ms-expand {
+  display: none; }
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0; }
+
+input[type=checkbox] {
+  -webkit-appearance: checkbox; }
+
+input[type=radio] {
+  -webkit-appearance: radio; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline; }
+
+input {
+  margin: 0;
+  padding: 0;
+  background-color: #fff; }
+
+input[disabled], input[disabled]:hover, input[disabled]:focus, input[readonly], input[readonly]:hover, input[readonly]:hover, textarea[disabled], textarea[disabled]:hover, textarea[disabled]:focus, textarea[readonly], textarea[readonly]:hover, textarea[readonly]:focus {
+  background-color: #fff !important; }
+
+input[type=submit], input[type=button] {
+  cursor: pointer; }
+
+textarea {
+  resize: none; }
+
+fieldset, img, abbr, acronym {
+  border: 0 none; }
+
+ul, ul li, li {
+  list-style: none !important; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0 none; }
+
+caption, th, td {
+  text-align: left;
+  vertical-align: middle;
+  font-weight: normal; }
+
+caption {
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+  width: 0; }
+
+img {
+  vertical-align: top; }
+
+label, select, input, textarea {
+  vertical-align: middle; }
+
+select optgroup {
+  font-style: normal; }
+
+i, em, address {
+  font-style: normal;
+  font-weight: normal; }
+
+legend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+hr {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0; }
+
+sub, sup, i.sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup, i.sup {
+  top: -0.5em; }
+
+label, .cursor_pointer {
+  cursor: pointer; }
+
+*:focus {
+  outline: none !important; }
+
+* {
+  outline: none !important;
+  text-decoration: none !important;
+  box-sizing: border-box; }
+
+.display_none {
+  display: none !important; }
+
+.ellipsis_text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 94%; }
+
+@media (max-width: 980px) {
+  .m_display_none {
+    display: none !important; } }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset; }
+
+a {
+  color: #000; }
+
+a, a:focus, a:hover, a:visited, a:active {
+  text-decoration: none;
+  cursor: pointer !important; }
+
+::selection {
+  background-color: #333333;
+  color: #fff; }
+
+.text_center.admin_table_st th, .text_center.admin_table_st td {
+  text-align: center; }
 
 /*# sourceMappingURL=reset.css.map */
