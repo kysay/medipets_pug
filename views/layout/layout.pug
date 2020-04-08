@@ -14,15 +14,14 @@ html
   body
     div.container
         div.header_wrap
-            div.logo_wrap
-                img(src=logo).logo
+            a(href='../').logo_wrap
+                //img(src=logo).logo
                 img(src="/img/logo.png")
-                script
-                    | console.log(logo)
-                    | console.log('logo??')
-            ul
+            ul.nav_wrap
                 li
                     a(href='../') MEDPETS
+                li
+                    a(href='../users') PROCESS
                 li
                     a(href='../users') PRODUCTS
                 li
