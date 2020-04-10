@@ -7,7 +7,6 @@ html
     link(rel='stylesheet', href='/stylesheets/common.css')
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/but_reset.css')
-    script(src="/js/img.js")
     script
         | console.log('layout');
         | console.log(logo);
@@ -15,7 +14,7 @@ html
     div.container
         div.header_wrap
             a(href='../').logo_wrap
-                //img(src=logo).logo
+                img(src=logo).logo
                 img(src="/img/logo.png")
             ul.nav_wrap
                 li
@@ -38,3 +37,4 @@ html
 
 
 
+script(src="/js/img.js")

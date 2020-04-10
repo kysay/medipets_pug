@@ -1,4 +1,4 @@
-// var logo = "/img/logo.png";
+const logo = "/img/logo.png";
 
 function a() {
     console.log('a');
