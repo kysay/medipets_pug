@@ -5,6 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
+// import $ from 'jQuery'
+
+
+
 // 라우터
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -17,6 +21,7 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(jQuery());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
