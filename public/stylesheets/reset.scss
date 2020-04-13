@@ -1,11 +1,14 @@
 @charset "utf-8";
 //@import 'variable';
 //@import 'mixin';
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
-html{-webkit-text-size-adjust:100%; font-family:'Noto Sans KR','Malgun Gothic','맑은고딕',dotum,'돋움',sans-serif !important; font-size:12px; overflow-x: hidden; }
-html:lang(en){font-family:'Noto Sans KR',sans-serif;}
-html:lang(ko){font-family:'Noto Sans KR','Malgun Gothic','맑은고딕',dotum,'돋움',sans-serif !important;}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+
+
+html{-webkit-text-size-adjust:100%; font-family:'Nanum Barun Gothic Noto Sans KR','Malgun Gothic','맑은고딕',dotum,'돋움',sans-serif !important; font-size:12px; overflow-x: hidden; }
+//html:lang(en){font-family:'Nanum Barun Gothic Noto Sans KR',sans-serif;}
+//html:lang(ko){font-family:'Nanum Barun Gothic Noto Sans KR','Malgun Gothic','맑은고딕',dotum,'돋움',sans-serif !important;}
 
 body{ color: #000; }
 
