@@ -1,30 +1,47 @@
 doctype html
 html
   head
-    title= title
+    title= medipets
+    meta(name="charset", content="UTF-8")
+    meta(name="title", content="medipets")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="keywords", content="반려동물 휠체어 반려동물 보조구 반려동물 의족")
+    meta(name="description", content="메디팻츠는")
+
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/reset.css')
     link(rel='stylesheet', href='/stylesheets/common.css')
     link(rel='stylesheet', href='/stylesheets/layout.css')
     link(rel='stylesheet', href='/stylesheets/but_reset.css')
+    link(rel='stylesheet', href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="/js/img.js")
+    //script(src="jquery.js")
+
     script
-        | console.log('layout');
-        | console.log(logo);
+        | console.log('제이커리')
+    //script(src="jquery.js")
+    script(src="/js/cursor_index.js")
+
   body
+    div.my-cursor
+      div.child
+        div.subchild
+
     div.container
         div.header_wrap
             a(href='../').logo_wrap
-                img(src=logo).logo
                 img(src="/img/logo.png")
             ul.nav_wrap
                 li
                     a(href='../') MEDPETS
                 li
-                    a(href='../users') PROCESS
+                    a(href='../about') PROCESS 어바웃
                 li
                     a(href='../users') PRODUCTS
                 li
-                    a(href='../users') CONTACT US
+                    a(href='../users/edit') CONTACT US 에딧
     div.container
         div.content_wrap
             block content
@@ -37,4 +54,3 @@ html
 
 
 
-script(src="/js/img.js")
