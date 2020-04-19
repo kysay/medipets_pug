@@ -20,20 +20,27 @@ html
 
     script(src="node_modules/jquery/dist/jquery.js")
     script(src="node_modules/slick-carousel/slick/slick.js")
+    script(src="/js/cursor_index.js")
+
   body
+    div.my-cursor
+        div.child
+            div.subchild
+
+
     div.container
         div.header_wrap
             a(href='../').logo_wrap
                 img(src="/img/logo.png")
             ul.nav_wrap
                 li
-                    a(href='../') MEDPETS
+                    a(href='../about') MEDPETS
                 li
-                    a(href='../users') PROCESS
+                    a(href='../process') PROCESS
                 li
-                    a(href='../users') PRODUCTS
+                    a(href='../product') PRODUCTS
                 li
-                    a(href='../users') CONTACT US
+                    a(href='../contact_us') CONTACT US 에딧
     div.container
         div.content_wrap
             block content

@@ -1,3 +1,7 @@
+html, body {
+  overflow: hidden;
+}
+
 ul.main_bg_wrap {
   position: absolute !important;
   left: 0;
@@ -26,7 +30,7 @@ ul.main_bg_wrap li div.text_wrap div.sub_text {
   font-size: 16px;
 }
 ul.main_bg_wrap li.bg_01 {
-  background: red;
+  background: green;
 }
 ul.main_bg_wrap li.bg_02 {
   background: blue;

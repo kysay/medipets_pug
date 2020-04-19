@@ -15,10 +15,9 @@ html
     link(rel='stylesheet', href='/stylesheets/but_reset.css')
     link(rel='stylesheet', href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="/js/img.js")
 
-    script
-        | console.log('제이커리')
+    script(src="node_modules/jquery/dist/jquery.js")
+    script(src="node_modules/slick-carousel/slick/slick.js")
     script(src="/js/cursor_index.js")
 
   body
@@ -32,13 +31,13 @@ html
                 img(src="/img/logo.png")
             ul.nav_wrap
                 li
-                    a(href='../') MEDPETS
+                    a(href='../about') MEDPETS
                 li
-                    a(href='../about') PROCESS 어바웃
+                    a(href='../process') PROCESS
                 li
-                    a(href='../users') PRODUCTS
+                    a(href='../product') PRODUCTS
                 li
-                    a(href='../users/edit') CONTACT US 에딧
+                    a(href='../contact_us') CONTACT US 에딧
     div.container
         div.content_wrap
             block content

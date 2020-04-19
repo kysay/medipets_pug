@@ -16,10 +16,11 @@ window.onload = function () {
         );
     });
 
-    $("a").on("mouseenter", function () {
+    $('a, .arrow_wrap li').on("mouseenter", function () {
         cursor.addClass("my-cursor--active");
     });
-    $("a").on("mouseleave", function () {
+
+    $('a, .arrow_wrap li').on("mouseleave", function () {
         cursor.removeClass("my-cursor--active");
     });
 
