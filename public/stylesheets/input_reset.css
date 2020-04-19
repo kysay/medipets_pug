@@ -1,0 +1,14 @@
+input {
+  border: 1px solid black;
+  padding: 5px;
+  line-height: 30px;
+  height: 40px;
+  transition: all 2ms;
+}
+
+input:focus {
+  border: 1px solid red;
+  transition: all 2ms;
+}
+
+/*# sourceMappingURL=input_reset.css.map */
