@@ -1,0 +1,63 @@
+ul.main_bg_wrap {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  z-index: -1;
+}
+ul.main_bg_wrap li {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+ul.main_bg_wrap li div.text_wrap {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 90px);
+  transform: translate(-50%, -50%);
+}
+ul.main_bg_wrap li div.text_wrap div.main_text {
+  font-size: 32px;
+}
+ul.main_bg_wrap li div.text_wrap div.sub_text {
+  font-size: 16px;
+}
+ul.main_bg_wrap li.bg_01 {
+  background: red;
+}
+ul.main_bg_wrap li.bg_02 {
+  background: blue;
+}
+ul.main_bg_wrap li.bg_03 {
+  background: green;
+}
+ul.main_bg_wrap .slick-list,
+ul.main_bg_wrap .slick-track,
+ul.main_bg_wrap .slick-slide,
+ul.main_bg_wrap .slick-slide > div,
+ul.main_bg_wrap li {
+  height: 100%;
+}
+
+ul.arrow_wrap {
+  display: inline-block;
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 90px);
+  transform: translate(-50%, -50%);
+}
+ul.arrow_wrap li {
+  float: left;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+ul.arrow_wrap li:last-of-type {
+  float: right;
+}
+
+/*# sourceMappingURL=main.css.map */
