@@ -1,20 +1,19 @@
 var cmd = require("node-cmd");
 
 var deployKey = [
-    // "bundle exec cap dmall1-vlok deploy",
-    // "bundle exec cap dmall2_ootdshop deploy"
-    "clear",
-    "clear"
+    "bundle exec cap dmall1-vlok deploy",
+    "bundle exec cap dmall2_ootdshop deploy"
 ]
-deployKey.forEach(function (item) {
+// deployKey.forEach(function (item) {
     cmd.get(
-        "#{item}"
+        // "#{item}"
+        `pwd`
         , function (error, success, stderr) {
             if (error) {
                 console.log("ERROR 발생 :\n\n", error);
             } else {
-                console.log(item + "SUCCESS :\n\n", success);
+                console.log("SUCCESS :\n\n", success);
             }
         }
     );
-});
+// });
