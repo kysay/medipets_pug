@@ -33,7 +33,7 @@
   .header_wrap .nav_wrap {
     display: inline-block;
     float: left;
-    width: calc(100% - 156px); }
+    width: calc(100% - 256px); }
     .header_wrap .nav_wrap li {
       float: left;
       margin-right: 20px;
@@ -43,6 +43,23 @@
         font-size: 18px;
         line-height: 46px; }
     .header_wrap .nav_wrap li:last-of-type {
+      margin-right: 0; }
+  .header_wrap .bbs_wrap {
+    display: inline-block;
+    float: left;
+    width: 100px; }
+    .header_wrap .bbs_wrap li {
+      float: left;
+      margin-right: 10px; }
+      .header_wrap .bbs_wrap li a {
+        border: 1px solid red;
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        display: inline-block;
+        line-height: 45px;
+        text-align: center; }
+    .header_wrap .bbs_wrap li:last-of-type {
       margin-right: 0; }
 
 .content_wrap {

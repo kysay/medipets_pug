@@ -1,55 +1,61 @@
 doctype html
 html
-  head
-    title= medipets
-    meta(name="charset", content="UTF-8")
-    meta(name="title", content="medipets")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="keywords", content="반려동물 휠체어 반려동물 보조구 반려동물 의족")
-    meta(name="description", content="메디팻츠는")
+    head
+        title= medipets
+        meta(name="charset", content="UTF-8")
+        meta(name="title", content="medipets")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="keywords", content="반려동물 휠체어 반려동물 보조구 반려동물 의족")
+        meta(name="description", content="메디팻츠는")
 
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/reset.css')
-    link(rel='stylesheet', href='/stylesheets/common.css')
-    link(rel='stylesheet', href='/stylesheets/layout.css')
-    link(rel='stylesheet', href='/stylesheets/but_reset.css')
-    link(rel='stylesheet', href='/stylesheets/input_reset.css')
-    link(rel='stylesheet', href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/reset.css')
+        link(rel='stylesheet', href='/stylesheets/common.css')
+        link(rel='stylesheet', href='/stylesheets/layout.css')
+        link(rel='stylesheet', href='/stylesheets/but_reset.css')
+        link(rel='stylesheet', href='/stylesheets/input_reset.css')
+        link(rel='stylesheet', href='https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
 
-    script(src="node_modules/jquery/dist/jquery.js")
-    script(src="node_modules/slick-carousel/slick/slick.js")
-    script(src="/js/cursor_index.js")
+        script(src="node_modules/jquery/dist/jquery.js")
+        script(src="node_modules/slick-carousel/slick/slick.js")
+        script(src="/js/cursor_index.js")
 
-  body
-    div.my-cursor
-      div.child
-        div.subchild
+    body
+        div.my-cursor
+            div.child
+                div.subchild
 
-    div.container
-        div.header_wrap
-            a(href='../').logo_wrap
-                img(src="/img/logo.png")
-            ul.nav_wrap
-                li
-                    a(href='../about') MEDPETS
-                li
-                    a(href='../process') PROCESS
-                li
-                    a(href='../product') PRODUCTS
-                li
-                    a(href='../contact_us') CONTACT US
-    div.container
-        div.content_wrap
-            block content
-    div
-      div.footer_wrap
         div.container
-            | 강원도 강릉시 송정동 225번지 | 사업자등록번호 : 123-45-67890<br/>
-            | TEL : 010 3343 6352 | FAX : 02 1234 1234 | E-mail : help@medpets.com<br/><br/>
-            | COPYRIGHT©2019 MEDPETS, INC. ALL RIGHTS RESERVED.
-            a(href='#') 개인정보처리방침
-            a(href='#') 이용약관
+            div.header_wrap
+                a(href='../').logo_wrap
+                    img(src="/img/logo.png")
+                ul.nav_wrap
+                    li
+                        a(href='../about') MEDPETS
+                    li
+                        a(href='../process') PROCESS
+                    li
+                        a(href='../product') PRODUCTS
+                    li
+                        a(href='../contact_us') CONTACT US
+                ul.bbs_wrap
+                    li
+                        a(href='../contact_us') 문의
+                    li
+                        a(href='../contact_us') 게시판
+
+        div.container
+            div.content_wrap
+                block content
+        div
+            div.footer_wrap
+                div.container
+                    | 강원도 강릉시 송정동 225번지 | 사업자등록번호 : 123-45-67890<br/>
+                    | TEL : 010 3343 6352 | FAX : 02 1234 1234 | E-mail : help@medpets.com<br/><br/>
+                    | COPYRIGHT©2019 MEDPETS, INC. ALL RIGHTS RESERVED.
+                    a(href='#') 개인정보처리방침
+                    a(href='#') 이용약관
 
 
 

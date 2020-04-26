@@ -16,9 +16,15 @@
   .logo_wrap { display: inline-block; float:left; width: 136px; margin-right: 20px;
     img {  }
   }
-  .nav_wrap { display: inline-block; float:left; width: calc(100% - 156px);
+  .nav_wrap { display: inline-block; float:left; width: calc(100% - 256px);
     li { float:left; margin-right: 20px; display: inline-block;
       a { font-weight: bold; font-size: 18px; line-height: 46px; }
+    }
+    li:last-of-type { margin-right: 0; }
+  }
+  .bbs_wrap { display: inline-block; float:left; width: 100px;
+    li { float: left; margin-right: 10px;
+      a { border: 1px solid red; width: 45px; height: 45px; border-radius: 100%; display: inline-block; line-height: 45px; text-align: center; }
     }
     li:last-of-type { margin-right: 0; }
   }
