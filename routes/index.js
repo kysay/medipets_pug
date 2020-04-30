@@ -18,5 +18,17 @@ router.get('/process', function(req, res, next) {
 router.get('/contact_us', function(req, res, next) {
   res.render('contact_us');
 });
+router.get('/privacy-policy', function(req, res, next) {
+  res.render('privacy-policy');
+});
+router.get('/services', function(req, res, next) {
+  res.render('services');
+});
+router.get('/send_mail', function(req, res, next) {
+  res.render('send_mail');
+});
+router.get('/bbs', function(req, res, next) {
+  res.render('bbs');
+});
 
 module.exports = router;
