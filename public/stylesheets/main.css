@@ -24,11 +24,17 @@ ul.main_bg_wrap {
       ul.main_bg_wrap li div.text_wrap div.sub_text {
         font-size: 16px; }
   ul.main_bg_wrap li.bg_01 {
-    background: green; }
+    background-image: url("../img/main_01.png");
+    background-size: cover;
+    background-position: center; }
   ul.main_bg_wrap li.bg_02 {
-    background: blue; }
+    background-image: url("../img/main_02.png");
+    background-size: cover;
+    background-position: center; }
   ul.main_bg_wrap li.bg_03 {
-    background: green; }
+    background-image: url("../img/main_01.png");
+    background-size: cover;
+    background-position: center; }
   ul.main_bg_wrap .slick-list,
   ul.main_bg_wrap .slick-track,
   ul.main_bg_wrap .slick-slide,

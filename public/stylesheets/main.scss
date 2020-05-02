@@ -8,9 +8,9 @@ ul.main_bg_wrap { position: absolute !important; left: 0; top: 0; width: 100%; h
     }
   }
   //슬라이드 이미지 url 입력
-  li.bg_01 { background: green; }
-  li.bg_02 { background: blue; }
-  li.bg_03 { background: green; }
+  li.bg_01 { background-image: url("../img/main_01.png"); background-size: cover; background-position: center; }
+  li.bg_02 { background-image: url("../img/main_02.png"); background-size: cover; background-position: center; }
+  li.bg_03 { background-image: url("../img/main_01.png"); background-size: cover; background-position: center; }
 
   .slick-list,
   .slick-track,
