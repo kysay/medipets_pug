@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 라우터
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product', productRouter);
+app.use('/products', productRouter);
 
 
 

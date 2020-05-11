@@ -1,11 +1,13 @@
 extends layout/layout
 
 block content
+  div= sub_img
   h1= title
   p Welcome to #{title}
 
   div
-  | 프로덕츠
+    a(url='#') 휠체어
+    a(url='#') 보조기구
   br
   | 앞다리 없는 강아지, 뒷다리없는 강아지, 휠체어
   img(src="/img/test.png" style='width:350px; ')
