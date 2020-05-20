@@ -44,6 +44,8 @@
         line-height: 46px; }
     .header_wrap .nav_wrap li:last-of-type {
       margin-right: 0; }
+    .header_wrap .nav_wrap.main li a {
+      color: white; }
   .header_wrap .bbs_wrap {
     display: inline-block;
     float: left;

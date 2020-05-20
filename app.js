@@ -1,6 +1,11 @@
 const createError = require('http-errors');
 
 const express = require('express');
+// 메일
+const bodyParser = require('body-parser')
+const exphbs = require('express-handlebars')
+// const nodemailer = require('nodemailer')
+
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -41,7 +46,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
 
-
+// app.post('/send', (req, res) => {
+//   console.log(req.body)
+// })
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -58,5 +65,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
