@@ -4,7 +4,6 @@ const express = require('express');
 // 메일
 const bodyParser = require('body-parser')
 const exphbs = require('express-handlebars')
-// const nodemailer = require('nodemailer')
 
 
 const path = require('path');
