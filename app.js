@@ -46,9 +46,67 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter);
 
+// app.post('/result', (req, res, next) => {
+//     res.render('result');
+// });
+
 // app.post('/send', (req, res) => {
 //   console.log(req.body)
 // })
+
+
+app.post('/result', (req, res, next) => {
+    console.log(req.body);
+    const output =
+        `<ul>
+            <li>name : ${req.body.name} </li>
+            <li>phone : ${req.body.phone} </li>
+            <li>mail : ${req.body.mail} </li>
+            <li>type : ${req.body.type} </li>
+            <li>content : ${req.body.content} </li>
+        </ul>
+        `;
+
+// create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        // host: "kysay.com",
+        // host: "smtp.ethereal.email",
+        // port: 587,
+        host: "localhost",
+        port: 25,
+        secure: false, // true for 465, false for other ports
+        auth: {
+            user: 'tlfldntm11@gmail.com', // generated ethereal user
+            pass: 'realdydtlr11', // generated ethereal password
+        },
+        tls: {
+            rejectUnauthorized:false
+        }
+    });
+
+    // send mail with defined transport object
+    let info = transporter.sendMail({
+        from: 'tlfldntm11@gmail.com', // sender address
+        to: "tlfldntm11@gmail.com", // list of receivers
+        subject: "문의가 왔습니다.", // Subject line
+        text: "Hello world?", // plain text body
+        html: output, // html body
+    });
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            //에러
+            console.log(error);
+        }
+        //전송 완료
+        console.log("Finish sending email : " + info.response);
+        transporter.close()
+    })
+
+    console.log("Finish sending email");
+    // res.redirect("/");
+    res.render('result', method='post');
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

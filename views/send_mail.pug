@@ -5,9 +5,10 @@ block content
 
 
 
-
-  form(method='post' action='send')
-    #{{msg}}
+  a(href='../result') result
+  form( method='post' action='../result')
+    <%= {{msg} %>
+    //#{{msg}}
     ul
       li
         input(type='text' placeholder='이름' name='name' id='name')
