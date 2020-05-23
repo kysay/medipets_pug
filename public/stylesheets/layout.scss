@@ -32,6 +32,12 @@
       a { border: 1px solid red; width: 45px; height: 45px; border-radius: 100%; display: inline-block; line-height: 45px; text-align: center; }
     }
     li:last-of-type { margin-right: 0; }
+
+    &.main {
+      li {
+        a { color: white; border-color: white; }
+      }
+    }
   }
 }
 
