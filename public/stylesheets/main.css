@@ -1,6 +1,40 @@
 html, body {
   overflow: hidden; }
 
+div.text_wrap {
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 40px);
+  transform: translate(-50%, -50%); }
+  div.text_wrap div.main_text {
+    font-size: 32px;
+    text-align: center; }
+    div.text_wrap div.main_text img {
+      margin: 0 auto; }
+  div.text_wrap div.sub_text {
+    font-size: 18px;
+    text-align: center;
+    color: white; }
+  div.text_wrap div.dot_st {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    margin-top: 20px; }
+    div.text_wrap div.dot_st ul {
+      display: inline-block; }
+      div.text_wrap div.dot_st ul li {
+        float: left; }
+        div.text_wrap div.dot_st ul li button {
+          font-size: 0;
+          width: 50px;
+          height: 3px;
+          background: #999;
+          border: 0;
+          margin-right: 5px; }
+        div.text_wrap div.dot_st ul li.slick-active button {
+          background: #d22234; }
+
 ul.main_bg_wrap {
   position: absolute !important;
   left: 0;
@@ -14,20 +48,6 @@ ul.main_bg_wrap {
     width: 100%;
     text-align: center;
     position: relative; }
-    ul.main_bg_wrap li div.text_wrap {
-      position: absolute;
-      left: 50%;
-      top: calc(50% - 90px);
-      transform: translate(-50%, -50%); }
-      ul.main_bg_wrap li div.text_wrap div.main_text {
-        font-size: 32px;
-        text-align: center; }
-        ul.main_bg_wrap li div.text_wrap div.main_text img {
-          margin: 0 auto; }
-      ul.main_bg_wrap li div.text_wrap div.sub_text {
-        font-size: 18px;
-        text-align: center;
-        color: white; }
   ul.main_bg_wrap li.bg_01 {
     background-image: url("../img/main_01.png");
     background-size: cover;
@@ -52,7 +72,7 @@ ul.arrow_wrap {
   width: 70%;
   position: absolute;
   left: 50%;
-  top: calc(50% - 90px);
+  top: calc(50% - 40px);
   transform: translate(-50%, -50%); }
   ul.arrow_wrap li {
     float: left;

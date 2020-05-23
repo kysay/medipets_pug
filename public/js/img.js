@@ -4,4 +4,7 @@ $('.main_bg_wrap').slick({
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
     dots: true,
+    appendDots:$(".dot_st"),
+    autoplay: true,
+    autoplaySpeed: 3000,
 });
