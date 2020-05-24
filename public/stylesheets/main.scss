@@ -20,11 +20,18 @@ div.text_wrap { position: absolute; left: 50%; top: calc(50% - 40px); transform:
 }
 
 ul.main_bg_wrap { position: absolute !important; left: 0; top: 0; width: 100%; height: 100%; display: inline-block; z-index: -1;
-  li { display: inline-block; width: 100%; text-align: center; position: relative; }
+  li { display: inline-block; width: 100%; text-align: center; position: relative; background-repeat:no-repeat; background-size: cover; background-position: center;
+    //animation: bg 10s infinite alternate;
+  }
   //슬라이드 이미지 url 입력
-  li.bg_01 { background-image: url("../img/main_01.png"); background-size: cover; background-position: center; }
-  li.bg_02 { background-image: url("../img/main_02.png"); background-size: cover; background-position: center; }
-  li.bg_03 { background-image: url("../img/main_01.png"); background-size: cover; background-position: center; }
+  li.bg_01 { background-image: url("../img/main_01.png"); }
+  li.bg_02 { background-image: url("../img/main_02.png"); }
+  li.bg_03 { background-image: url("../img/main_01.png"); }
+
+  @keyframes bg {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+  }
 
   .slick-list,
   .slick-track,

@@ -59,21 +59,26 @@ ul.main_bg_wrap li {
   width: 100%;
   text-align: center;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 ul.main_bg_wrap li.bg_01 {
   background-image: url("../img/main_01.png");
-  background-size: cover;
-  background-position: center;
 }
 ul.main_bg_wrap li.bg_02 {
   background-image: url("../img/main_02.png");
-  background-size: cover;
-  background-position: center;
 }
 ul.main_bg_wrap li.bg_03 {
   background-image: url("../img/main_01.png");
-  background-size: cover;
-  background-position: center;
+}
+@keyframes bg {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
 ul.main_bg_wrap .slick-list,
 ul.main_bg_wrap .slick-track,
