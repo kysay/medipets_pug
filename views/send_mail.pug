@@ -7,21 +7,20 @@ block content
 
   a(href='../result') result
   form( method='post' action='../result')
-    <%= {{msg} %>
-    //#{{msg}}
+    #{{msg}}
     ul
       li
         input(type='text' placeholder='이름' name='name' id='name' value='1')
-        label(for='name') | dfd
+        label(for='name') | 이름
       li
         input(type='number' placeholder='전화번호' name='phone' id='phone' value='2')
-        label(for='phone') | dfd
+        label(for='phone') | 전화번호
       li
         input(type='text' placeholder='이메일' name='mail' id='mail' value='3')
-        label(for='mail') | dfd
+        label(for='mail') | 이메일
       li
         input(type='text' placeholder='반려동물 종류' name='type' id='type' value='4')
-        label(for='type') | dfd
+        label(for='type') | 반려동물 종류
       li
         textarea(placeholder='반려동물 증상' name='content')
       li

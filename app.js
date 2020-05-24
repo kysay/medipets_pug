@@ -2,9 +2,10 @@ const createError = require('http-errors');
 
 const express = require('express');
 // 메일
-const bodyParser = require('body-parser')
-const exphbs = require('express-handlebars')
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
 
+const nodemailer = require('nodemailer')
 
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -54,7 +55,7 @@ app.use('/products', productRouter);
 // })
 
 
-app.post('/result', (req, res, next) => {
+app.post('/result', (req, res) => {
     console.log(req.body);
     const output =
         `<ul>
@@ -65,52 +66,74 @@ app.post('/result', (req, res, next) => {
             <li>content : ${req.body.content} </li>
         </ul>
         `;
+    // let transporter = nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         type: 'OAuth2',
+    //         user: 'tlfldntm11@gmail.com',
+    //         clientId: 'XXX-XXX.apps.googleusercontent.com',
+    //         clientSecret: 'SY0-XXXX',
+    //         refreshToken: '1/XXX_XXX',
+    //         accessToken: 'ya29.XXX-XXX-XXX-XXX'
+    //     }
+    // });
+    //
+    // let mailOptions = {
+    //     from: 'FReyes <tlfldntm11@gmail.com>',
+    //     to: req.body.to,
+    //     subject: req.body.subject,
+    //     text: req.body.txt
+    // };
+    //
+    // transporter.sendMail(mailOptions, function (err, res) {
+    //     console.log(mailOptions);
+    //     if(err){
+    //         console.log('Error');
+    //     } else {
+    //         console.log('Email Sent');
+    //     }
+    // })
 
-// create reusable transporter object using the default SMTP transport
+
     let transporter = nodemailer.createTransport({
-        // host: "kysay.com",
-        // host: "smtp.ethereal.email",
-        // port: 587,
-        host: "localhost",
-        port: 25,
-        secure: false, // true for 465, false for other ports
+        service: 'gmail',
         auth: {
-            user: 'tlfldntm11@gmail.com', // generated ethereal user
-            pass: 'realdydtlr11', // generated ethereal password
-        },
-        tls: {
-            rejectUnauthorized:false
+            type: 'OAuth2',
+            user: 'tlfldntm11@gmail.com',
+            clientId: 'XXX-XXX.apps.googleusercontent.com',
+            clientSecret: 'SY0-XXXX',
+            refreshToken: '1/XXX_XXX',
+            accessToken: 'ya29.XXX-XXX-XXX-XXX'
         }
     });
 
-    // send mail with defined transport object
-    let info = transporter.sendMail({
-        from: 'tlfldntm11@gmail.com', // sender address
-        to: "tlfldntm11@gmail.com", // list of receivers
-        subject: "문의가 왔습니다.", // Subject line
-        text: "Hello world?", // plain text body
-        html: output, // html body
-    });
+    let mailOptions = {
+        from: '<tlfldntm11@gmail.com>',
+        to: req.body.to,
+        subject: req.body.subject,
+        text: req.body.txt
+    };
 
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-            //에러
-            console.log(error);
+    transporter.sendMail(mailOptions, function (err, res) {
+        if(err){
+            console.log('Error');
+        } else {
+            console.log('Email Sent');
         }
-        //전송 완료
-        console.log("Finish sending email : " + info.response);
-        transporter.close()
     })
 
-    console.log("Finish sending email");
-    // res.redirect("/");
-    res.render('result', method='post');
-})
+});
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

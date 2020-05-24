@@ -1,3 +1,4 @@
+@import "variable";
 //컨텐츠 넓이
 .container {
   padding-right: 15px; padding-left: 15px;
@@ -7,7 +8,7 @@
 .container:after { clear: both; }
 @media (min-width: 768px) { .container { width: 750px; } }
 @media (min-width: 992px) { .container { width: 970px; } }
-@media (min-width: 1200px) { .container { width: 1170px; } }
+@media (min-width: 1200px) { .container { width: 970px; } }
 
 
 
@@ -16,22 +17,30 @@
   .logo_wrap { display: inline-block; float:left; width: 136px; margin-right: 20px;
     img {  }
   }
-  .nav_wrap { display: inline-block; float:left; width: calc(100% - 256px);
-    li { float:left; margin-right: 20px; display: inline-block;
-      a { font-weight: bold; font-size: 18px; line-height: 46px; }
+  .nav_wrap { display: flex; float:left; width: calc(100% - 256px); padding: 0 50px;
+    li { float:left; display: inline-block; flex: 1; text-align: center;
+      a { font-weight: bold; font-size: 18px; line-height: 46px;  }
     }
-    li:last-of-type { margin-right: 0; }
     &.main {
       li {
         a { color: white; }
       }
     }
   }
-  .bbs_wrap { display: inline-block; float:left; width: 100px;
-    li { float: left; margin-right: 10px;
-      a { border: 1px solid red; width: 45px; height: 45px; border-radius: 100%; display: inline-block; line-height: 45px; text-align: center; }
+
+  @media (max-width: 992px) {
+    .nav_wrap { padding: 0;
+      li {
+        a { font-size: 16px; }
+      }
     }
-    li:last-of-type { margin-right: 0; }
+  }
+
+  .bbs_wrap { display: inline-block; float:left; width: 100px;
+    li { float: right;
+      a { margin-top: 5px; border: 1px solid $main_c_01; width: 35px; height: 35px; font-size: 10px; border-radius: 100%; display: inline-block; line-height: 33px; text-align: center; font-weight: bold;}
+    }
+    li:first-of-type { margin-left: 10px; }
 
     &.main {
       li {
@@ -39,6 +48,16 @@
       }
     }
   }
+}
+
+.mobile_wrap { display: none; float: right;
+  img { width: 45px; }
+}
+
+
+@media (max-width: 768px) {
+  .nav_wrap, .bbs_wrap { display: none !important; }
+  .mobile_wrap { display: block; }
 }
 
 
@@ -52,3 +71,7 @@
 }
 
 .my-cursor { overflow: hidden;}
+
+.sub_img_wrap { height: 200px; background: green; margin-top: - 80px; }
+.sub__title { display: inline-block; width: 100%; margin-top: 40px; margin-bottom: 20px; font-size: 24px; font-weight: bold; text-align: center; }
+
