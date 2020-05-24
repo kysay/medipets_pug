@@ -13,10 +13,10 @@ router.get('/about', function (req, res, next) {
     res.render('about');
 });
 router.get('/process', function (req, res, next) {
-    res.render('process');
+    res.render('process', { name:'process' });
 });
 router.get('/contact_us', function (req, res, next) {
-    res.render('contact_us');
+    res.render('contact_us', { name:'contact_us' });
 });
 router.get('/privacy-policy', function (req, res, next) {
     res.render('privacy-policy');
@@ -33,7 +33,7 @@ router.get('/send_mail', function (req, res, next) {
 
 
 router.get('/bbs', function (req, res, next) {
-    res.render('bbs');
+    res.render('bbs', { name:'bbs' });
 });
 
 module.exports = router;
