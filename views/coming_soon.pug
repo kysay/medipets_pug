@@ -1,0 +1,53 @@
+link(rel='stylesheet', href='/stylesheets/reset.css')
+style(type='text/css').
+  html, body { background: black; position: relative; }
+  .coming_soon_wrap { color:white; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center; z-index: 100;
+    font-weight: bold; font-size: 42px; letter-spacing: 5; line-height: 45px; }
+  .coming_soon_wrap > div { font-size: 22px; letter-spacing: 1; margin-top: 20px; }
+
+
+  .clock { width: 250px; height: 250px; background: red; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; }
+
+  .spinner {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #454545;
+    border-radius: 50%;
+  }
+
+  .spinner:before, .spinner:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 3px;
+    background-color: #454545;
+    border-radius: 1.5px;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    left: 50%; top: 50%;
+  }
+
+  .spinner:before { height: 80px; -webkit-animation: spin 20000ms linear infinite; animation: spin 20000ms linear infinite; }
+  .spinner:after { height: 100px; -webkit-animation: spin 5000ms linear infinite; animation: spin 5000ms linear infinite; }
+
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+
+div.coming_soon_wrap
+  | C O M I N G
+  br
+  | S O O N
+  br
+  div  메디펫츠 홈페이지 리뉴얼중
+
+
+div.spinner
