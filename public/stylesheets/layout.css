@@ -206,10 +206,10 @@ ul.mobile_wrap.active {
   padding-bottom: 120px;
   display: inline-block;
   width: 100%;
+  font-size: 14px;
 }
 
 .footer_wrap {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -218,6 +218,9 @@ ul.mobile_wrap.active {
   line-height: 15px;
   background: white;
   z-index: 110;
+}
+.footer_wrap.main {
+  position: fixed;
 }
 
 .my-cursor {
