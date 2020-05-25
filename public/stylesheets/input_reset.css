@@ -9,4 +9,24 @@ input:focus {
   border: 1px solid red;
   transition: all 2ms; }
 
+.send_mail_wrap li {
+  float: left;
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 15px; }
+  .send_mail_wrap li label {
+    display: inline-block;
+    width: 100px;
+    padding-left: 10px;
+    font-weight: bold; }
+  .send_mail_wrap li label + input {
+    width: calc(100% - 100px); }
+  .send_mail_wrap li textarea {
+    width: 100%;
+    display: inline-block;
+    min-height: 150px;
+    resize: vertical; }
+  .send_mail_wrap li input[type='submit'] {
+    width: 200px; }
+
 /*# sourceMappingURL=input_reset.css.map */

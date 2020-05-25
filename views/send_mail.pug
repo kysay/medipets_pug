@@ -3,23 +3,22 @@ extends layout/layout
 block content
   include layout/location.pug
 
-  a(href='../result') result
   form( method='post' action='../result')
     //#{{msg}}
-    ul
-      li
+    ul.send_mail_wrap
+      li.w_50
+        label(for='name') 이름
         input(type='text' placeholder='이름' name='name' id='name' value='1')
-        label(for='name') | 이름
-      li
+      li.w_50
+        label(for='phone') 전화번호
         input(type='number' placeholder='전화번호' name='phone' id='phone' value='2')
-        label(for='phone') | 전화번호
-      li
+      li.w_50
+        label(for='mail') 이메일
         input(type='text' placeholder='이메일' name='mail' id='mail' value='3')
-        label(for='mail') | 이메일
-      li
+      li.w_50
+        label(for='type') 반려동물 종류
         input(type='text' placeholder='반려동물 종류' name='type' id='type' value='4')
-        label(for='type') | 반려동물 종류
-      li
+      li.w_100
         textarea(placeholder='반려동물 증상' name='content')
-      li
+      li.w_100.text-center
         input(type='submit')

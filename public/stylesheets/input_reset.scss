@@ -9,9 +9,18 @@ input {
   line-height: $input_line_height;
   height: $input_height;
   transition: all 2ms;
-
 }
 input:focus {
   border: 1px solid red;
   transition: all 2ms;
+}
+
+.send_mail_wrap {
+  li { float: left; width: 100%; display: inline-block; margin-bottom: 15px;
+    input {  }
+    label { display: inline-block; width: 100px; padding-left: 10px; font-weight: bold; }
+    label + input { width: calc(100% - 100px); }
+    textarea { width: 100%; display: inline-block; min-height: 150px; resize: vertical; }
+    input[type='submit'] { width: 200px; }
+  }
 }
