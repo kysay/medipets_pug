@@ -19,10 +19,10 @@ router.get('/contact_us', function (req, res, next) {
     res.render('contact_us', { name:'contact_us' });
 });
 router.get('/privacy-policy', function (req, res, next) {
-    res.render('privacy-policy', { name:'privacy-policy' });
+    res.render('privacy-policy', { name:'개인정보처리방침' });
 });
 router.get('/services', function (req, res, next) {
-    res.render('services', { name:'services' });
+    res.render('services', { name:'이용약관' });
 });
 router.get('/send_mail', function (req, res, next) {
     res.render('send_mail', { name:'문의하기' });
@@ -33,7 +33,7 @@ router.get('/send_mail', function (req, res, next) {
 
 
 router.get('/bbs', function (req, res, next) {
-    res.render('bbs', { name:'bbs' });
+    res.render('bbs', { name:'게시판' });
 });
 
 module.exports = router;
