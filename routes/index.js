@@ -27,6 +27,9 @@ router.get('/services', function (req, res, next) {
 router.get('/send_mail', function (req, res, next) {
     res.render('send_mail', { name:'문의하기' });
 });
+router.get('/coming_soon', function (req, res, next) {
+    res.render('coming_soon');
+});
 
 // app.post('/result', (req, res, next) => {
 // });
