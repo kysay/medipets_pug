@@ -132,6 +132,10 @@ body.on {
     display: block !important;
   }
 }
+.overflow_h {
+  overflow: hidden !important;
+}
+
 .hidden-sm {
   display: block;
 }
