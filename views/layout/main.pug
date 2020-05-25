@@ -22,6 +22,7 @@ html
     script(src="node_modules/jquery/dist/jquery.js")
     script(src="node_modules/slick-carousel/slick/slick.js")
     script(src="/js/cursor_index.js")
+    script(src="/js/mobileBtn.js")
 
   body
     div.my-cursor
@@ -47,6 +48,27 @@ html
                     a(href='../send_mail') 문의
                 li
                     a(href='../bbs') 게시판
+
+            a(id='mobileNav' class='mobile_btn main' href='javascrip:;')
+                div
+                div
+                div
+
+            ul.mobile_wrap
+                li
+                    a(href='../about') MEDPETS
+                li
+                    a(href='../process') PROCESS
+                li
+                    a(href='../products') PRODUCTS
+                li
+                    a(href='../contact_us') CONTACT US
+                li.w_50
+                    a(href='../send_mail') 문의
+                li.w_50
+                    a(href='../bbs') 게시판
+
+
     div.container
         div.content_wrap
             block content
