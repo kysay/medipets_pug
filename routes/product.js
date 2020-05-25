@@ -4,7 +4,7 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-  res.render('products', {sub_img:'11'});
+  res.render('products', {sub_img:'11', name: 'products'});
 });
 
 
