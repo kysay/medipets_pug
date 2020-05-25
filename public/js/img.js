@@ -6,5 +6,5 @@ $('.main_bg_wrap').slick({
     dots: true,
     appendDots:$(".dot_st"),
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4500,
 });
