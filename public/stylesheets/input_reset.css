@@ -25,7 +25,8 @@ input:focus {
     width: 100%;
     display: inline-block;
     min-height: 150px;
-    resize: vertical; }
+    resize: vertical;
+    padding: 10px; }
   .send_mail_wrap li input[type='submit'] {
     width: 200px; }
 

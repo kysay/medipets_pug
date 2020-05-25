@@ -87,7 +87,9 @@
   .mobile_wrap {
     display: block; } }
 .content_wrap {
-  padding-bottom: 120px; }
+  padding-bottom: 120px;
+  display: inline-block;
+  width: 100%; }
 
 .footer_wrap {
   position: fixed;
@@ -116,8 +118,8 @@
 .sub__title {
   display: inline-block;
   width: 100%;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 60px;
   font-size: 24px;
   font-weight: bold;
   text-align: center; }
