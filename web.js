@@ -18,44 +18,44 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require('./routes/product');
 
-const app = express();
+const web = express();
 
-app.use('/node_modules', express.static(path.join(__dirname, '/node_modules')));
+web.use('/node_modules', express.static(path.join(__dirname, '/node_modules')));
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+web.set('views', path.join(__dirname, 'views'));
+web.set('view engine', 'pug');
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+web.use(logger('dev'));
+web.use(express.json());
+web.use(express.urlencoded({ extended: false }));
+web.use(cookieParser());
 
-app.use(sassMiddleware({
+web.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+web.use(express.static(path.join(__dirname, 'public')));
 
 // 라우터
-app.use('/', indexRouter);
-// app.use('/users', usersRouter);
-app.use('/products', productRouter);
+web.use('/', indexRouter);
+// web.use('/users', usersRouter);
+web.use('/products', productRouter);
 
-// app.post('/result', (req, res, next) => {
+// web.post('/result', (req, res, next) => {
 //     res.render('result');
 // });
 
-// app.post('/send', (req, res) => {
+// web.post('/send', (req, res) => {
 //   console.log(req.body)
 // })
 
 
-app.post('/result', (req, res) => {
+web.post('/result', (req, res) => {
     console.log(req.body);
     const output =
         `<ul>
@@ -128,7 +128,7 @@ app.post('/result', (req, res) => {
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+web.use(function(req, res, next) {
   next(createError(404));
 });
 
@@ -136,7 +136,7 @@ app.use(function(req, res, next) {
 
 
 // error handler
-app.use(function(err, req, res, next) {
+web.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -148,4 +148,4 @@ app.use(function(err, req, res, next) {
 
 
 
-module.exports = app;
+module.exports = web;
