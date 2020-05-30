@@ -7,6 +7,7 @@ div.text_wrap {
   left: 50%;
   top: calc(50% - 40px);
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 div.text_wrap div.main_text {
   font-size: 32px;
@@ -86,6 +87,24 @@ ul.main_bg_wrap .slick-slide,
 ul.main_bg_wrap .slick-slide > div,
 ul.main_bg_wrap li {
   height: 100%;
+}
+
+.main_btn_wrap {
+  display: inline-block;
+  margin-top: 45px;
+}
+.main_btn_wrap li:first-child {
+  margin-right: 15px;
+}
+.main_btn_wrap li {
+  float: left;
+}
+.main_btn_wrap li a {
+  border: 1px solid white;
+  color: white;
+  padding: 10px 20px;
+  height: 40px;
+  border-radius: 20px;
 }
 
 ul.arrow_wrap {
