@@ -1,151 +1,90 @@
-const createError = require('http-errors');
+#!/usr/bin/env node
 
-const express = require('express');
-// 메일
-const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
+/**
+ * Module dependencies.
+ */
 
-const nodemailer = require('nodemailer')
+var app = require('./app');
+var debug = require('debug')('medipets:server');
+var http = require('http');
 
-const path = require('path');
-const cookieParser = require('cookie-parser');
+/**
+ * Get port from environment and store in Express.
+ */
 
-const logger = require('morgan');
-const sassMiddleware = require('node-sass-middleware');
+var port = normalizePort(process.env.PORT || '8001');
+app.set('port', port);
 
-// 라우터
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const productRouter = require('./routes/product');
+/**
+ * Create HTTP server.
+ */
 
-const web = express();
+var server = http.createServer(app);
 
-web.use('/node_modules', express.static(path.join(__dirname, '/node_modules')));
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
 
-// view engine setup
-web.set('views', path.join(__dirname, 'views'));
-web.set('view engine', 'pug');
+/**
+ * Normalize a port into a number, string, or false.
+ */
 
-web.use(logger('dev'));
-web.use(express.json());
-web.use(express.urlencoded({ extended: false }));
-web.use(cookieParser());
+function normalizePort(val) {
+  var port = parseInt(val, 10);
 
-web.use(sassMiddleware({
-  src: path.join(__dirname, 'public'),
-  dest: path.join(__dirname, 'public'),
-  indentedSyntax: true, // true = .sass and false = .scss
-  sourceMap: true
-}));
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
 
-web.use(express.static(path.join(__dirname, 'public')));
+  if (port >= 0) {
+    // port number
+    return port;
+  }
 
-// 라우터
-web.use('/', indexRouter);
-// web.use('/users', usersRouter);
-web.use('/products', productRouter);
+  return false;
+}
 
-// web.post('/result', (req, res, next) => {
-//     res.render('result');
-// });
+/**
+ * Event listener for HTTP server "error" event.
+ */
 
-// web.post('/send', (req, res) => {
-//   console.log(req.body)
-// })
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
 
+  var bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
 
-web.post('/result', (req, res) => {
-    console.log(req.body);
-    const output =
-        `<ul>
-            <li>name : ${req.body.name} </li>
-            <li>phone : ${req.body.phone} </li>
-            <li>mail : ${req.body.mail} </li>
-            <li>type : ${req.body.type} </li>
-            <li>content : ${req.body.content} </li>
-        </ul>
-        `;
-    // let transporter = nodemailer.createTransport({
-    //     service: 'gmail',
-    //     auth: {
-    //         type: 'OAuth2',
-    //         user: 'tlfldntm11@gmail.com',
-    //         clientId: 'XXX-XXX.apps.googleusercontent.com',
-    //         clientSecret: 'SY0-XXXX',
-    //         refreshToken: '1/XXX_XXX',
-    //         accessToken: 'ya29.XXX-XXX-XXX-XXX'
-    //     }
-    // });
-    //
-    // let mailOptions = {
-    //     from: 'FReyes <tlfldntm11@gmail.com>',
-    //     to: req.body.to,
-    //     subject: req.body.subject,
-    //     text: req.body.txt
-    // };
-    //
-    // transporter.sendMail(mailOptions, function (err, res) {
-    //     console.log(mailOptions);
-    //     if(err){
-    //         console.log('Error');
-    //     } else {
-    //         console.log('Email Sent');
-    //     }
-    // })
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
 
+/**
+ * Event listener for HTTP server "listening" event.
+ */
 
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            type: 'OAuth2',
-            user: 'tlfldntm11@gmail.com',
-            clientId: 'XXX-XXX.apps.googleusercontent.com',
-            clientSecret: 'SY0-XXXX',
-            refreshToken: '1/XXX_XXX',
-            accessToken: 'ya29.XXX-XXX-XXX-XXX'
-        }
-    });
-
-    let mailOptions = {
-        from: '<tlfldntm11@gmail.com>',
-        to: req.body.to,
-        subject: req.body.subject,
-        text: req.body.txt
-    };
-
-    transporter.sendMail(mailOptions, function (err, res) {
-        if(err){
-            console.log('Error');
-        } else {
-            console.log('Email Sent');
-        }
-    })
-
-});
-
-
-
-
-// catch 404 and forward to error handler
-web.use(function(req, res, next) {
-  next(createError(404));
-});
-
-
-
-
-// error handler
-web.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
-
-
-
-module.exports = web;
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}
