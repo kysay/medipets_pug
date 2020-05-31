@@ -23,6 +23,20 @@ const app = express();
 app.use('/node_modules', express.static(path.join(__dirname, '/node_modules')));
 
 
+const env = process.env.NODE_ENV || "dev";
+let host = process.env.HOST;
+let user = process.env.USERNAME;
+let password = process.env.PASSWORD;
+let database = process.env.DATABASE;
+if (env === "dev") {
+    host = "localhost";
+    user = "rontend";
+    password = process.env.DEV_PASSWORD;
+    database = "blockcell";
+}
+
+
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

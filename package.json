@@ -5,8 +5,12 @@
   "main": "/app.js",
   "scripts": {
     "start": "node web.js",
-    "terminal_test": "node ./bin/terminal_test"
-  },
+    "terminal_test": "node ./bin/terminal_test",
+
+    "dev": "nodemon --exec babel-node src/init.js",
+    "build": "babel src --out-dir dist",
+    "start_": "NODE_ENV=production node web.js"
+},
   "dependencies": {
     "body-parser": "^1.19.0",
     "cookie-parser": "~1.4.4",
